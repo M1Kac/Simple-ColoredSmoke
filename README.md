@@ -4,6 +4,8 @@
 # Requirements
 [Latest release of Counter Strike Sharp](https://github.com/roflmuffin/CounterStrikeSharp)
 
+![image info](./ColoredSmoke.png)
+
 # Instalation
 - Download the latest release from https://github.com/abnerfs/Simple-ColoredSmoke/releases
 - Extract the .zip file into `addons/counterstrikesharp/plugins`
