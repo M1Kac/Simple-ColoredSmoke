@@ -9,6 +9,6 @@ This is a simple plugin that automatically changes the default smoke color to ra
 ![image info](./ColoredSmoke.png)
 
 # Instalation
-- Download the latest release from https://github.com/abnerfs/Simple-ColoredSmoke/releases
+- Download the latest release from [https://github.com/abnerfs/Simple-ColoredSmoke/releases](https://github.com/M1Kac/Simple-ColoredSmoke/tags)
 - Extract the .zip file into `addons/counterstrikesharp/plugins`
 - Enjoy
