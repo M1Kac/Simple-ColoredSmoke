@@ -11,7 +11,7 @@ public class ConfigGen : BasePluginConfig
 {
     [JsonPropertyName("Enabled")] public bool Enabled { get; set; } = true;
     [JsonPropertyName("Flag")] public string Flag { get; set; } = ""; 
-    [JsonPropertyName("Color")] public string Color { get; set; } = ""; 
+    [JsonPropertyName("Color")] public string Color { get; set; } = "random"; 
 }
 
 public partial class ColoreddSmoke : BasePlugin, IPluginConfig<ConfigGen>
