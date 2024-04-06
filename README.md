@@ -19,8 +19,8 @@ Configuration file generated on addons/counterstrikesharp/configs/plugins/Colore
 ```json
 {
   "Enabled": true,
-  "Flag": "",
-  "Color": "random", // red, blue, green & random
+  "Flag": "", //
+  "Color": "random", // red, blue, green, purple, orange, cijan & random
   "ConfigVersion": 1
 }
 ```
