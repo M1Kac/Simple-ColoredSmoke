@@ -19,7 +19,7 @@ public partial class ColoreddSmoke : BasePlugin, IPluginConfig<ConfigGen>
     public override string ModuleName => "ColoredSmoke";
     public override string ModuleAuthor => "M1k@c";
     public override string ModuleDescription => "ColoredSmoke";
-    public override string ModuleVersion => "V. 1.0.1";
+    public override string ModuleVersion => "V. 1.0.2";
 
     public ConfigGen Config { get; set; } = null!;
     public void OnConfigParsed(ConfigGen config) { Config = config; }
@@ -40,8 +40,7 @@ public partial class ColoreddSmoke : BasePlugin, IPluginConfig<ConfigGen>
                     continue;
 
                 var client = new CCSPlayerController(ent);
-                if (Config.Flag != "" && !AdminManager.PlayerHasPermissions(client, Config.Flag)) return;
-                if (client == null || !client.IsValid)
+                if (client == null || !client.IsValid);
                     continue;
             }
         });
@@ -54,10 +53,8 @@ public partial class ColoreddSmoke : BasePlugin, IPluginConfig<ConfigGen>
                 ConnectedPlayers = 0;
                 Round = 0;
             });
-
         }
     }
-    
 
     private void OnEntitySpawned(CEntityInstance entity)
     {
@@ -72,12 +69,34 @@ public partial class ColoreddSmoke : BasePlugin, IPluginConfig<ConfigGen>
           {
             var entityIndex = smokeGrenadeEntity.Thrower.Value.Controller.Value.Index;
 
+            var throwerValue = smokeGrenadeEntity.Thrower.Value;
+            if (throwerValue == null) return;
+
+            var throwerValueController = throwerValue.Controller.Value;
+            if (throwerValueController == null) return;
+
+            var controller = new CCSPlayerController(throwerValueController.Handle);
+
+            if (Config.Flag != "" && !AdminManager.PlayerHasPermissions(controller, Config.Flag)) return;
+
             if (entityIndex == null) return;
             if (Config.Color == "red")
             {
               smokeGrenadeEntity.SmokeColor.X = 255.0f;
               smokeGrenadeEntity.SmokeColor.Y = 0.0f;
               smokeGrenadeEntity.SmokeColor.Z = 0.0f;
+            }
+            if (Config.Color == "orange")
+            {
+              smokeGrenadeEntity.SmokeColor.X = 255.0f;
+              smokeGrenadeEntity.SmokeColor.Y = 100.0f;
+              smokeGrenadeEntity.SmokeColor.Z = 0.0f;
+            }
+            if (Config.Color == "purple")
+            {
+              smokeGrenadeEntity.SmokeColor.X = 255.0f;
+              smokeGrenadeEntity.SmokeColor.Y = 0.0f;
+              smokeGrenadeEntity.SmokeColor.Z = 100.0f;
             }
             if (Config.Color == "blue")
             {
@@ -89,7 +108,13 @@ public partial class ColoreddSmoke : BasePlugin, IPluginConfig<ConfigGen>
             {
               smokeGrenadeEntity.SmokeColor.X = 0.0f;
               smokeGrenadeEntity.SmokeColor.Y = 255.0f;
-              smokeGrenadeEntity.SmokeColor.Z = 255.0f;
+              smokeGrenadeEntity.SmokeColor.Z = 50.0f;
+            }
+            if (Config.Color == "cijan")
+            {
+              smokeGrenadeEntity.SmokeColor.X = 0.0f;
+              smokeGrenadeEntity.SmokeColor.Y = 255.0f;
+              smokeGrenadeEntity.SmokeColor.Z = 200.0f;
             }
             if (Config.Color == "random")
             {
