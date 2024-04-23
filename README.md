@@ -19,9 +19,8 @@ Configuration file generated on addons/counterstrikesharp/configs/plugins/Colore
 ```json
 {
   "Enabled": true,
-  "EnableColoredSmokeTeam": true,
   "Flag": "", // access required for get access to this plugin, leave blank "" for public access.
-  "Color": "random", // red, blue, green, purple, orange, cijan & random
+  "Color": "random", // random / teamcolor
   "ConfigVersion": 1
 }
 ```
